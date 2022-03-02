@@ -1,7 +1,7 @@
 from pynput import keyboard
 from pynput.keyboard import Controller as KeyboardController
 from pynput.keyboard import Key
-import pyautogui
+import pyautogui as pg
 from discord import utils
 import threading
 import random
@@ -26,15 +26,14 @@ def send(message):
     keyboard1.press(Key.enter)
     keyboard1.release(Key.enter)
 
-
 def findButton():
     color = (88, 101, 242)
     clicked = False
-    s = pyautogui.screenshot()
+    s = pg.screenshot()
     for x in range(s.width):
         for y in range(s.height):
             if s.getpixel((x, y)) == color:
-                pyautogui.click(x, y)
+                pg.click(x, y)
                 clicked = True
                 break 
         if clicked == True:
