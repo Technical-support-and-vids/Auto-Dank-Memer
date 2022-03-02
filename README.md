@@ -5,12 +5,10 @@ A python program that run on computer and grinds dank coins for you :D You Need 
 type 
 pip install pynput
 
-and 
+pip install Pillow
+
 pip install pyautogui
 
-
-and also
-
 pip install discord.py
-or
+
 pip install discord
